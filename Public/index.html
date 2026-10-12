@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بوابة المدرسة</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-icon">🎓</span><span><strong id="schoolName">مدرستي</strong><small>الموقع الرسمي للمدرسة</small></span></a>
+  <nav><a href="#home">الرئيسية</a><a href="#staff">الإدارة والكادر</a><a href="#announcements">الإعلانات</a><a href="#contact">اتصل بنا</a></nav>
+  <div class="nav-actions"><button id="loginNav" class="btn btn-light">تسجيل الدخول</button><button id="logoutNav" class="btn btn-light hidden">خروج</button></div>
+</header>
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy"><span class="eyebrow">بوابة التواصل المدرسي</span><h1>معاً نحو تعليم أفضل</h1><p id="schoolDescription">منصة رسمية للتعريف بالمدرسة، ومتابعة إعلاناتها، والتواصل مع الكادر التدريسي بأمان.</p><div class="hero-actions"><a class="btn btn-primary" href="#staff">تعرّف على الكادر</a><a class="btn btn-outline" href="#announcements">آخر الإعلانات</a></div><p id="sessionNote" class="muted small">بيانات التواصل متاحة للطلاب وأولياء الأمور بعد تسجيل الدخول.</p></div>
+  <div class="hero-art"><div class="art-circle">✦</div><div class="book">📚</div><div class="art-caption"><strong>العلم يبني المستقبل</strong><span>المعرفة • الاحترام • النجاح</span></div></div>
+</section>
+<section id="staff" class="section">
+  <div class="section-heading"><div><span class="eyebrow">فريق المدرسة</span><h2>الإدارة والكادر التدريسي</h2><p>تعرّف على فريق المدرسة. سجّل الدخول للوصول إلى وسائل التواصل.</p></div><span class="pill">المدير والكادر</span></div>
+  <div id="staffGrid" class="staff-grid"><div class="empty">جارٍ تحميل بيانات الكادر...</div></div>
+</section>
+<section id="announcements" class="section alt">
+  <div class="section-heading"><div><span class="eyebrow">ابقَ على اطلاع</span><h2>إعلانات المدرسة</h2><p>آخر الأخبار والتنبيهات الرسمية.</p></div></div>
+  <div id="announcementsGrid" class="announcement-grid"></div>
+</section>
+<section id="contact" class="contact-band"><div><span class="eyebrow light">نحن هنا لمساعدتك</span><h2>تواصل مع إدارة المدرسة</h2><p>للاستفسارات العامة، يرجى استخدام بيانات الاتصال الرسمية التي توفرها المدرسة.</p></div><button class="btn btn-white" id="contactLogin">دخول الطلاب وأولياء الأمور</button></section>
+<section id="loginSection" class="section hidden">
+  <div class="login-card"><span class="eyebrow">منطقة الأعضاء</span><h2>تسجيل الدخول</h2><p class="muted">الحسابات ينشئها مدير المدرسة أو الشخص المخوّل.</p><form id="loginForm"><label>اسم المستخدم أو البريد الإلكتروني<input name="username" autocomplete="username" required></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required></label><button class="btn btn-primary full" type="submit">دخول آمن</button><p id="loginError" class="error"></p></form></div>
+</section>
+<section id="dashboard" class="section hidden">
+  <div class="section-heading"><div><span class="eyebrow">مساحة العمل</span><h2 id="dashboardTitle">لوحة التحكم</h2><p id="dashboardSubtitle"></p></div><span id="rolePill" class="pill"></span></div>
+  <div id="dashboardContent"></div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> <span id="footerSchool">مدرستي</span></span><span>موقع المدرسة الرسمي • بوابة التواصل</span></footer>
+<div id="toast" class="toast hidden" role="status"></div>
+<script src="/app.js" defer></script>
+</body></html>
